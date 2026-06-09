@@ -1,5 +1,5 @@
 import { FlatList, Text, View } from 'react-native';
-import { products } from '../products/productsStore';
+import { products } from '../../../constants/productsStore';
 
 export default function ProductScreen() {
   
