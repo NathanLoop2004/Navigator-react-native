@@ -8,14 +8,14 @@ const StackLayout = () => {
   return (
     <Stack
 
-      screenOptions = {{
+      screenOptions ={{
         headerShadowVisible: false,
         gestureEnabled: true,
         animation: 'slide_from_right',
         fullScreenGestureEnabled: true,
       }}
     >
-      <Stack.Screen name="home/index"     options={{ title: "Stack" }} />
+      <Stack.Screen name="home/index"     options={{ title: "Home" }} />
       <Stack.Screen name="products/index" options={{ title: "Productos" }} />
       <Stack.Screen name="profile/index"  options={{ title: "Perfil" }} />
       <Stack.Screen name="settings/index" options={{ title: "Configuracion" }} />

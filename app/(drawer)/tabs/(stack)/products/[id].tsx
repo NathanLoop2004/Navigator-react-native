@@ -1,7 +1,7 @@
+import { products } from '@/constants/productsStore';
 import { Redirect, Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Text, View } from 'react-native';
-import { products } from '../../../../constants/productsStore';
 
 
 const ProductDetailScreen = () => {

@@ -1,6 +1,6 @@
+import { products } from '@/constants/productsStore';
 import { router } from 'expo-router';
 import { FlatList, Pressable, Text, View } from 'react-native';
-import { products } from '../../../../constants/productsStore';
 
 export default function ProductScreen() {
    

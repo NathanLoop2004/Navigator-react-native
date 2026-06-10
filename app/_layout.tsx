@@ -4,6 +4,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { View } from "react-native";
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import '../lib/ignoreDeprecatedPointerEventsWarning';
 import "./global.css";
 
@@ -28,12 +29,16 @@ export default function RootLayout() {
 
 
   return (
-    <View className="flex-1">
+    <GestureHandlerRootView className="flex-1">
+      <View className="flex-1">
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="tabs" options={{ headerShown: false }} />
+        <Stack.Screen name="(drawer)" options={{ headerShown: false, 
+         }} />
       </Stack>
       <StatusBar style="light" />
-    </View>
+      </View>
+    </GestureHandlerRootView>
+
   );
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-const index = () => {
+const scheduleScreen = () => {
   return (
     <View>
-      <Text>index</Text>
+      <Text>scheduleScreen</Text>
     </View>
   )
 }
 
-export default index
+export default scheduleScreen
