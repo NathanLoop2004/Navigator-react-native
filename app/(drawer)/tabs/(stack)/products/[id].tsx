@@ -1,17 +1,32 @@
 import { products } from '@/constants/productsStore';
-import { Redirect, Stack, useLocalSearchParams } from 'expo-router';
+import { Stack, router, useLocalSearchParams } from 'expo-router';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 
 const ProductDetailScreen = () => {
 
-   const { id } = useLocalSearchParams();
-   const productId = Array.isArray(id) ? id[0] : id;
+   const { id } = useLocalSearchParams<{ id: string }>();
 
-   const product = products.find((p) => p.id === productId);
+   const product = products.find((p) => p.id === id);
     if (!product){
-        return <Redirect href="/tabs/products" />;
+        return (
+          <View className="px-5 mt-10">
+            <Stack.Screen options={{ title: 'Producto no encontrado' }} />
+            <View className="bg-white p-5 rounded-lg shadow">
+              <Text className="text-2xl font-work-black">Producto no encontrado</Text>
+              <Text className="my-5 font-work-light">
+                No se encontro informacion para el producto seleccionado.
+              </Text>
+              <Pressable
+                className="rounded-lg bg-primary p-4 active:opacity-75"
+                onPress={() => router.back()}
+              >
+                <Text className="text-center font-work-black text-white">Volver</Text>
+              </Pressable>
+            </View>
+          </View>
+        );
     }
 
   return (

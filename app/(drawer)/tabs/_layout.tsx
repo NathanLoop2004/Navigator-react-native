@@ -14,6 +14,7 @@ const TabsLayout = () => {
       }} />
       <Tabs.Screen name="favorites/index" options={{
         title: 'Favorites',
+        headerShown: true,
         tabBarIcon: () => <Text>Fav</Text>
       }} />
 

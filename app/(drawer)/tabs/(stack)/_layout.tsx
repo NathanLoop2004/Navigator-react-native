@@ -10,7 +10,7 @@ export const unstable_settings = {
 const StackLayout = () => {
   const navigation = useNavigation();
 
-  const headerLeft = ({ tintColor }: { tintColor?: string }) => (
+  const drawerButton = ({ tintColor }: { tintColor?: string }) => (
     <Pressable
       onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
       style={styles.headerButton}
@@ -29,11 +29,11 @@ const StackLayout = () => {
         fullScreenGestureEnabled: true,
       }}
     >
-      <Stack.Screen name="home/index"     options={{ title: "Home", headerLeft }} />
-      <Stack.Screen name="products/index" options={{ title: "Productos", headerLeft }} />
-      <Stack.Screen name="profile/index"  options={{ title: "Perfil", headerLeft }} />
-      <Stack.Screen name="settings/index" options={{ title: "Configuracion", headerLeft }} />
-      <Stack.Screen name="products/[id]" options={{ title: "Producto" }} />
+      <Stack.Screen name="home/index"     options={{ title: "Home", headerLeft: drawerButton }} />
+      <Stack.Screen name="products/index" options={{ title: "Productos", headerLeft: drawerButton }} />
+      <Stack.Screen name="profile/index"  options={{ title: "Perfil", headerLeft: drawerButton }} />
+      <Stack.Screen name="settings/index" options={{ title: "Configuracion", headerLeft: drawerButton }} />
+      <Stack.Screen name="products/[id]" options={{ title: "Producto", headerLeft: drawerButton }} />
 
     </Stack>
   );
