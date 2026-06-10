@@ -6,20 +6,37 @@ import React from 'react'
 const DrawerLayout = () => {
   return (
     <Drawer
-      screenOptions={{
-        headerShown: false,
-        drawerType: 'front',
-        swipeEnabled: true,
-      }}
       drawerContent={(props) => (
         <DrawerContentScrollView {...props}>
-          <DrawerItem label="Home" onPress={() => router.push('/tabs/home')} />
+          <DrawerItem  label="Home" onPress={() => router.push('/tabs/home')}  />
           <DrawerItem label="User" onPress={() => router.push('/user')} />
           <DrawerItem label="Schedule" onPress={() => router.push('/schedule')} />
         </DrawerContentScrollView>
       )}
     >
-      <Drawer.Screen name="tabs" options={{ title: 'Home' }} />
+      <Drawer.Screen
+        name="tabs"
+        options={{
+          title: 'Home',
+          headerShown: false,
+          drawerType: 'front',
+          swipeEnabled: true,
+        }}
+      />
+      <Drawer.Screen
+        name="user"
+        options={{
+          title: 'User',
+          headerShown: true,
+        }}
+      />
+      <Drawer.Screen
+        name="schedule"
+        options={{
+          title: 'Schedule',
+          headerShown: true,
+        }}
+      />
     </Drawer>
   )
 }

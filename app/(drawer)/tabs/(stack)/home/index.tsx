@@ -1,10 +1,23 @@
 import CustomButton from '@/components/CustomButton'
-import { router } from 'expo-router'
+import { DrawerActions } from '@react-navigation/native'
+import { router, useNavigation } from 'expo-router'
 import React from 'react'
 import { Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-
 const HomeScreen = () => {
+
+   const navigation = useNavigation();
+
+   const openDrawer = () => {
+    navigation.dispatch(DrawerActions.toggleDrawer())
+
+
+   }
+
+
+
+
+
   return (
   <SafeAreaView>
     <View className="px-10 mt-5 ">
@@ -33,6 +46,12 @@ const HomeScreen = () => {
     onPress={()=> router.push('/tabs/settings')}>
        Settings 
     </CustomButton>
+    
+  <CustomButton onPress={openDrawer}>
+    Abrir Menu
+  </CustomButton>
+   
+
 
     </View>
 
