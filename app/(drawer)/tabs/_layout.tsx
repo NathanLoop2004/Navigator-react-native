@@ -16,14 +16,7 @@ const TabsLayout = () => {
         title: 'Favorites',
         tabBarIcon: () => <Text>Fav</Text>
       }} />
-      <Tabs.Screen name="user/index" options={{
-        href: null,
-        title: 'User',
-      }} />
-      <Tabs.Screen name="schedule/index" options={{
-        href: null,
-        title: 'Schedule',
-      }} />
+
     </Tabs>
   )
 }
