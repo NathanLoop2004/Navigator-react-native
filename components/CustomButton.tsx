@@ -5,12 +5,13 @@ import { Pressable, PressableProps, Text } from 'react-native';
 
 interface Props extends PressableProps {
   children: string;
+  className?: string;
   color?: string;
   onPress?: () => void;
   onLongPress?: () => void;
 }
 
-const CustomButton = ({ children, color, onPress, onLongPress }: Props) => {
+const CustomButton = ({ children, className, color, onPress, onLongPress }: Props) => {
 
   const BtnColor = {
     primary: 'bg-primary',
@@ -25,10 +26,10 @@ const CustomButton = ({ children, color, onPress, onLongPress }: Props) => {
 
   return (
 <Pressable
-className={`p-3 rounded-md ${BtnColor} active:opacity-75`} 
+className={`p-6 rounded-md ${BtnColor} active:opacity-75 ${className ?? ''}`} 
 onPress={onPress}
 onLongPress={onLongPress} >
-  <Text className="text-white text-center">{children}</Text>
+  <Text className="text-white text-center font-work-black">{children}</Text>
 </Pressable>
   )
 }

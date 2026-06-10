@@ -15,10 +15,12 @@ const StackLayout = () => {
         fullScreenGestureEnabled: true,
       }}
     >
-      <Stack.Screen name="home/index" options={{ title: "Inicio" }} />
+      <Stack.Screen name="home/index"     options={{ title: "Inicio" }} />
       <Stack.Screen name="products/index" options={{ title: "Productos" }} />
-      <Stack.Screen name="profile/index" options={{ title: "Perfil" }} />
+      <Stack.Screen name="profile/index"  options={{ title: "Perfil" }} />
       <Stack.Screen name="settings/index" options={{ title: "Configuracion" }} />
+      <Stack.Screen name="products/[id]" options={{ title: "Producto" }} />
+
     </Stack>
   );
 };
