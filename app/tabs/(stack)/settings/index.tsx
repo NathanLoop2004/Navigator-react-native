@@ -6,7 +6,7 @@ const SettingsScreen = () => {
   return (
     <View>
       <Text>SettingsScreen</Text>
-      <Link href="/home">Go to Home</Link>
+      <Link href="/tabs/home">Go to Home</Link>
     </View>
   )
 }

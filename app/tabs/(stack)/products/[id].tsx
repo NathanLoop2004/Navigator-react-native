@@ -1,7 +1,7 @@
 import { Redirect, Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Text, View } from 'react-native';
-import { products } from '../../../constants/productsStore';
+import { products } from '../../../../constants/productsStore';
 
 
 const ProductDetailScreen = () => {
@@ -11,7 +11,7 @@ const ProductDetailScreen = () => {
 
    const product = products.find((p) => p.id === productId);
     if (!product){
-        return <Redirect href="/products" />;
+        return <Redirect href="/tabs/products" />;
     }
 
   return (

@@ -12,6 +12,11 @@ const TabsLayout = () => {
         title: 'Favorites',
         tabBarIcon: () => <Text>⭐</Text>
       }} />
+         <Tabs.Screen name="(stack)" options={{ 
+        title: 'Stack',
+        headerShown: false,
+        tabBarIcon: () => <Text>📦</Text>
+      }} />
     </Tabs>
   )
 }

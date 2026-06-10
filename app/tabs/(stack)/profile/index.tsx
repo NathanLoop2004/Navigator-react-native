@@ -6,7 +6,7 @@ const ProfileScreen = () => {
   return (
     <View>
       <Text>ProfileScreen</Text>
-      <Link href="/home">Go to Home</Link>
+      <Link href="/tabs/home">Go to Home</Link>
     </View>
   )
 }

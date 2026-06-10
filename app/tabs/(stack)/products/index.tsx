@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { FlatList, Pressable, Text, View } from 'react-native';
-import { products } from '../../../constants/productsStore';
+import { products } from '../../../../constants/productsStore';
 
 export default function ProductScreen() {
    
@@ -16,7 +16,7 @@ export default function ProductScreen() {
         className="mt-10 active:opacity-75"
         onPress={() =>
           router.push({
-            pathname: "/products/[id]",
+            pathname: "/tabs/products/[id]",
             params: { id: item.id },
           })
         }
